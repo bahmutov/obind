@@ -1,6 +1,6 @@
 {
   "name": "obind",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Partial application for functions taking a single argument object",
   "main": "index.js",
   "scripts": {

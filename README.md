@@ -31,6 +31,10 @@ foo({
 It is like [Function.prototype.bind][bind] but for function that expect single
 options object. Note, `obind` only does [partial application, not context binding][partial vs binding].
 
+See [Partial application for options object][1] blog post.
+
+[1]: http://glebbahmutov.com/blog/partial-application-for-options-object/
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2015

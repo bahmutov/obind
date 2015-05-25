@@ -74,4 +74,14 @@ describe('obind', function () {
     var result = withBarBaz();
     la(result === 'foo', 'correct result', result);
   });
+
+  it('clones initial object', function () {
+    var bar = { bar: 'bar' };
+    var withBar = obind(foo, bar);
+    var result = withBar({ baz: 'baz' });
+    la(result === 'foo', 'initial result', result);
+    bar.bar = 'nope';
+    result = withBar({ baz: 'baz' });
+    la(result === 'foo', 'second result', result);
+  });
 });
