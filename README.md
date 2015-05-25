@@ -10,6 +10,8 @@
 
 Install and use under Node: `npm install obind --save`
 
+Use: `obind(fn, partialOptions)`, returns new function.
+
 ## Example
 
 ```js
