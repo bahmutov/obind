@@ -1,0 +1,33 @@
+{
+  "name": "obind",
+  "version": "0.1.0",
+  "description": "Partial application for functions taking a single argument object",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec test/*spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bahmutov/obind.git"
+  },
+  "keywords": [
+    "partial",
+    "application",
+    "function",
+    "argument",
+    "options",
+    "object",
+    "single"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/obind/issues"
+  },
+  "homepage": "https://github.com/bahmutov/obind",
+  "devDependencies": {
+    "check-more-types": "1.7.0",
+    "lazy-ass": "0.5.8",
+    "mocha": "2.2.5"
+  }
+}
