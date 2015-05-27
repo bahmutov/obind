@@ -35,6 +35,8 @@ See [Partial application for options object][1] blog post.
 
 [1]: http://glebbahmutov.com/blog/partial-application-for-options-object/
 
+For more examples, [see this page](examples.md).
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2015

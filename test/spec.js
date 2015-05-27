@@ -85,3 +85,49 @@ describe('obind', function () {
     la(result === 'foo', 'second result', result);
   });
 });
+
+describe('obind examples', function () {
+  var obind = require('..');
+  it('simple', function () {
+    function add(options) {
+      return options.a + options.b;
+    }
+    var add2 = obind(add, { a: 2 });
+    var result = add2({ b: 3 });
+    la(result === 5);
+  });
+
+  it('multiple steps', function () {
+    function add(options) {
+      return options.a + options.b;
+    }
+    var add2 = obind(add, { a: 2 });
+    var add2to5 = obind(add2, { b: 5 });
+    var result = add2to5();
+    la(result === 7);
+  });
+
+  it('needs empty object to start with', function () {
+    function add(options) {
+      return options.a + options.b;
+    }
+    var addNothing = obind(add, {});
+    var result = addNothing({ a: 2, b: 10 });
+    la(result === 12);
+  });
+
+  it('no changes to bound values', function () {
+    function add(options) {
+      return options.a + options.b;
+    }
+    var options = {
+      a: 10,
+      b: 20
+    };
+    var add10to20 = obind(add, options);
+    options.a = 1;
+    var result = add10to20({});
+    // changing options.a has no effect
+    la(result === 30);
+  });
+});
