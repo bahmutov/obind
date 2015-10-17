@@ -3,12 +3,19 @@
     return JSON.parse(JSON.stringify(obj));
   }
 
+  function isFunction(x) {
+    return typeof x === 'function';
+  }
+
   function isPlainObject(x) {
     return typeof x === 'object' &&
       Object.prototype.toString.call(x) === '[object Object]';
   }
 
   function obind(fn, partial) {
+    if (!isFunction(fn)) {
+      throw new Error('Expected function as first argument to obind');
+    }
     if (!isPlainObject(partial)) {
       throw new Error('Expected plain object partial argument');
     }
@@ -33,5 +40,8 @@
 
   if (typeof module === 'object') {
     module.exports = obind;
+  }
+  if (typeof window === 'object') {
+    window.obind = obind;
   }
 }());

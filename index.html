@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>obind demo</title>
+	<script src="index.js"></script>
+</head>
+<body>
+	<h2>obind demo</h2>
+	<script src="https://rawgit.com/bahmutov/console-log-div/master/console-log-div.js"></script>
+	<script src="https://rawgit.com/bahmutov/lazy-ass/master/index.js"></script>
+	<script>
+		la(typeof obind === 'function', 'cannot find obind', typeof obind);
+		function foo(options) {
+			la(options.bar === 'baz', 'invalid options', options);
+			console.log('foo received correct options object');
+			console.log(JSON.stringify(options));
+		}
+		var fooBound = obind(foo, {
+			bar: 'baz'
+		});
+		fooBound();
+	</script>
+</body>
+</html>

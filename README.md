@@ -37,6 +37,8 @@ See [Partial application for options object][1] blog post.
 
 For more examples, [see this page](examples.md).
 
+In the browser include the script and then use `window.obind` function.
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2015
