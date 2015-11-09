@@ -7,6 +7,7 @@
 [![Build status][obind-ci-image] ][obind-ci-url]
 [![dependencies][obind-dependencies-image] ][obind-dependencies-url]
 [![devdependencies][obind-devdependencies-image] ][obind-devdependencies-url]
+[![semantic-release][semantic-image] ][semantic-url]
 
 Install and use under Node: `npm install obind --save`
 
@@ -87,6 +88,8 @@ OTHER DEALINGS IN THE SOFTWARE.
 [obind-dependencies-url]: https://david-dm.org/bahmutov/obind
 [obind-devdependencies-image]: https://david-dm.org/bahmutov/obind/dev-status.png
 [obind-devdependencies-url]: https://david-dm.org/bahmutov/obind#info=devDependencies
+[semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
+[semantic-url]: https://github.com/semantic-release/semantic-release
 
 [bind]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
 [partial vs binding]: http://glebbahmutov.com/blog/binding-vs-partial-application/
