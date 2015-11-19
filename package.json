@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha -R spec test/*spec.js",
     "examples": "xplain -i test/spec.js -o examples.md",
-    "commit": "./node_modules/pre-git/node_modules/commitizen/bin/git-cz"
+    "commit": "commit-wizard"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
   "devDependencies": {
     "check-more-types": "2.1.2",
     "lazy-ass": "0.6.0",
-    "mocha": "2.3.3",
+    "mocha": "2.3.4",
     "pre-git": "1.2.1",
     "xplain": "0.5.4"
   },
