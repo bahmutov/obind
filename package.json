@@ -7,7 +7,8 @@
     "test": "mocha -R spec test/*spec.js",
     "examples": "xplain -i test/spec.js -o examples.md",
     "commit": "git-issues && commit-wizard",
-    "issues": "git-issues"
+    "issues": "git-issues",
+    "prepublish": "pkgfiles"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "git-issues": "1.2.0",
     "lazy-ass": "0.6.0",
     "mocha": "2.3.4",
+    "pkgfiles": "2.3.0",
     "pre-git": "1.3.0",
     "xplain": "0.5.4"
   },
