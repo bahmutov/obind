@@ -1,18 +1,19 @@
 {
   "name": "obind",
-  "version": "0.2.0",
   "description": "Partial application for functions taking a single argument object",
   "main": "index.js",
+  "version": "0.0.0-semantic-release",
   "scripts": {
-    "test": "mocha -R spec test/*spec.js",
+    "test": "mocha test/*spec.js",
     "examples": "xplain -i test/spec.js -o examples.md",
     "commit": "git-issues && commit-wizard",
     "issues": "git-issues",
-    "prepublish": "pkgfiles"
+    "prepublish": "pkgfiles",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:bahmutov/obind.git"
+    "url": "https://github.com/bahmutov/obind.git"
   },
   "keywords": [
     "partial",
@@ -36,15 +37,15 @@
     "mocha": "2.3.4",
     "pkgfiles": "2.3.0",
     "pre-git": "1.3.0",
-    "xplain": "0.5.4"
+    "xplain": "0.5.4",
+    "semantic-release": "^4.3.5"
   },
   "config": {
     "pre-git": {
       "commit-msg": "validate-commit-msg",
       "pre-commit": [
         "npm test",
-        "npm run examples",
-        "npm version"
+        "npm run examples"
       ],
       "pre-push": [],
       "post-commit": [],
