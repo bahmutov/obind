@@ -8,6 +8,7 @@
 [![dependencies][obind-dependencies-image] ][obind-dependencies-url]
 [![devdependencies][obind-devdependencies-image] ][obind-devdependencies-url]
 [![semantic-release][semantic-image] ][semantic-url]
+[![manpm](https://img.shields.io/badge/manpm-%E2%9C%93-3399ff.svg)](https://github.com/bahmutov/manpm)
 
 Install and use under Node: `npm install obind --save`
 
