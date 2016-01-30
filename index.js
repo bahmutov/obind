@@ -22,14 +22,16 @@
     var obj = copy(partial);
 
     return function obound(arg) {
-      if (arguments.length === 1 &&
+      if (arguments.length > 0 &&
         isPlainObject(arg)) {
         Object.keys(arg).forEach(function (key) {
           if (typeof copy[key] === 'undefined') {
             obj[key] = arg[key];
           }
         });
-        return fn(obj);
+        var allArguments = Array.prototype.slice.call(arguments, 0);
+        allArguments[0] = obj;
+        return fn.apply(null, allArguments);
       } else if (isPlainObject(partial)) {
         return fn(partial);
       } else {

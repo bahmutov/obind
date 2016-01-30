@@ -131,3 +131,30 @@ describe('obind examples', function () {
     la(result === 30);
   });
 });
+
+describe('multiple arguments', function () {
+  var obind = require('..');
+  function foo(opts, second, third) {
+    la(check.object(opts), 'expected opts to be an object', opts);
+    la(opts.bar === 'bar', 'expected opts.bar to be "bar", got', opts.bar);
+    la(opts.baz === 'baz', 'expected opts.baz to be "baz", got', opts.baz);
+    la(Object.keys(opts).length === 2, 'expected only bar and baz, got', opts);
+
+    la(second === 'second', 'second arg', second);
+    la(third === 'third', 'third arg', third);
+
+    return 'foo';
+  }
+
+  it('needs second and third arguments too', function () {
+    var options = {
+      bar: 'bar',
+      baz: 'baz'
+    };
+    var bound = obind(foo, options);
+    la(check.fn(bound), 'returned bound function');
+
+    var result = bound({}, 'second', 'third');
+    la(result === 'foo', 'returned result', result);
+  });
+});

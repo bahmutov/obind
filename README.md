@@ -41,6 +41,16 @@ For more examples, [see this page](examples.md).
 
 In the browser include the script and then use `window.obind` function.
 
+Additional arguments after the first object will be passed unchanged
+
+```js
+function foo(options, a, b) { ... }
+var bound = obind(foo, someOptions)
+bound(moreOptions, a, b)
+// same as
+foo(moreOptions + someOptions, a, b)
+```
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2015
