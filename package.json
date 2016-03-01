@@ -10,7 +10,7 @@
     "issues": "git-issues",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "debug-test": "devtool node_modules/mocha/bin/_mocha -qc -- test/*-spec.js"
+    "debug-test": "devtool node_modules/mocha/bin/_mocha --quit --console -- --debug test/*-spec.js"
   },
   "files": [
     "index.js",
