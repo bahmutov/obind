@@ -4,12 +4,13 @@
   "main": "index.js",
   "version": "0.0.0-semantic-release",
   "scripts": {
-    "test": "mocha test/*spec.js",
-    "examples": "xplain -i test/spec.js -o examples.md",
+    "test": "mocha test/*-spec.js",
+    "examples": "xplain -i test/obind-spec.js -o examples.md",
     "commit": "git-issues && commit-wizard",
     "issues": "git-issues",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "debug-test": "devtool node_modules/mocha/bin/_mocha -qc -- test/*-spec.js"
   },
   "files": [
     "index.js",
