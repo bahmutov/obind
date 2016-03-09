@@ -40,13 +40,13 @@
   },
   "homepage": "https://github.com/bahmutov/obind",
   "devDependencies": {
-    "check-more-types": "2.10.0",
+    "check-more-types": "2.11.0",
     "git-issues": "1.2.0",
     "lazy-ass": "1.4.0",
     "mocha": "2.4.5",
-    "pre-git": "3.4.0",
+    "pre-git": "3.4.1",
     "semantic-release": "6.2.0",
-    "standard": "6.0.7",
+    "standard": "6.0.8",
     "standard-format": "2.1.1",
     "xplain": "0.6.0"
   },
