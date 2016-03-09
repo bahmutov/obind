@@ -30,6 +30,8 @@ foo({
 */
 ```
 
+## Information
+
 It is like [Function.prototype.bind][bind] but for function that expect single
 options object. Note, `obind` only does [partial application, not context binding][partial vs binding].
 
@@ -49,6 +51,22 @@ var bound = obind(foo, someOptions)
 bound(moreOptions, a, b)
 // same as
 foo(moreOptions + someOptions, a, b)
+```
+
+## Parameter destructuring
+
+If you like ES6 [parameter destructuring](http://www.2ality.com/2015/01/es6-destructuring.html) 
+(and you should), then `obind` helps you partially apply it.
+
+```js
+function mul({a, b}) { 
+  console.log(a, b); 
+  return a * b 
+}
+const double = obind(mul, {a: 2})
+console.log(double({b: 3}))
+// 2, 3
+// 6
 ```
 
 ### Small print
