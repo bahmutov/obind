@@ -69,6 +69,8 @@ console.log(double({b: 3}))
 // 6
 ```
 
+Read [related blog post](https://glebbahmutov.com/blog/parameter-destructuring/).
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2015
